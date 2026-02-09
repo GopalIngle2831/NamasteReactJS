@@ -181,4 +181,5 @@ root.render(<AppLayout/>)
 
 //IMP-> Config driven UI = UI containing data according to different scenario, like in swiggy api the UI is rendering different data for different locations
 //Keys are used to identify React elements inside the same list (same array).
+//Keys must be unique in the same array (same list).
 //Not using key (not acceptable) <<<< using index as a key (not good practice) <<<< using unique id as a key (best practice)
