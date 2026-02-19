@@ -88,3 +88,16 @@ This all comes in React Fibre:-
 
     👉 React can pause work
     👉 Resume later for smooth UI
+
+# Some important concepts
+- Monolithic Architecture:-
+    A software design where the whole application is built as one single unit. All modules (UI, business logic, database) are tightly connected and deployed together.
+
+- Microservices Architecture:-
+    A software design where the application is divided into small independent services. Each service handles one feature and can be developed, deployed, and scaled separately.
+
+- Separation of Concern (SoC):-
+    A design principle that means divide a program into different sections, where each section handles a specific responsibility (like UI, data, logic).
+
+- Single Responsibility Principle (SRP):-
+    A design rule that means one class or module should have only one job or responsibility. If something changes, only one part of code should need modification.  
