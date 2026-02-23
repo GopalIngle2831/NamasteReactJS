@@ -101,3 +101,7 @@ This all comes in React Fibre:-
 
 - Single Responsibility Principle (SRP):-
     A design rule that means one class or module should have only one job or responsibility. If something changes, only one part of code should need modification.  
+
+# 2 types of Routing in Web Apps
+- Client Side -> URL changes are handled in the browser by JavaScript (React Router) without reloading the page.
+- Server Side -> Every URL change sends a request to the server and the page is reloaded with new HTML.
