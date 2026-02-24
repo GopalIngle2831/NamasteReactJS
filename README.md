@@ -105,3 +105,91 @@ This all comes in React Fibre:-
 # 2 types of Routing in Web Apps
 - Client Side -> URL changes are handled in the browser by JavaScript (React Router) without reloading the page.
 - Server Side -> Every URL change sends a request to the server and the page is reloaded with new HTML.
+
+# Difference between Functional Component and Class based Component in React
+
+   ================= RENDER & RE-RENDER (FUNCTIONAL COMPONENT) =================
+
+-> Initial Render:
+- root.render(<App />) calls the function component
+- The function executes and returns JSX
+- React creates Virtual DOM and updates the Real DOM
+
+-> Re-render:
+- Happens when state or props change
+- React calls the function again
+- New JSX is returned
+- React compares old and new Virtual DOM (diffing)
+- Only changed parts are updated in the Real DOM
+
+
+   ================= RENDER & RE-RENDER (CLASS COMPONENT) =================
+
+-> Initial Render:
+- root.render(<App />) creates an instance of the class component
+- React calls the render() method
+- render() returns JSX
+- React creates Virtual DOM and updates the Real DOM
+
+-> Re-render:
+- Happens when setState() or props change
+- React calls render() again
+- New JSX is returned
+- React performs diffing (reconciliation)
+- Only changed parts are updated in the Real DOM
+
+# React Lifecycle
+React follows the same working for both class and functional components.
+
+Render Phase (Top → Down):
+Parent renders first, then child components render to build the UI tree (Virtual DOM).
+
+Commit Phase (Bottom → Up):
+React mounts all components and updates the real DOM,
+then runs side effects (componentDidMount / useEffect([])) starting from children and moving up to the parent.
+
+Re-render:
+No new instance or state is created.
+Class components reuse the same instance.
+Functional components recreate variables, but React preserves state.
+
+Summary:
+Render → top to bottom
+Side effects → bottom to top
+State → updated, not recreated
+
+----> In the render phase, React builds the Virtual DOM (UI blueprint)
+----> In the commit phase, React mounts all components, updates the real DOM and then runs side effects
+
+----> React first finishes rendering all parents and children, then it updates the real DOM in one commit, after the DOM is updated, React runs side effects (componentDidMount / useEffect)
+
+Examples:-
+
+===== CLASS COMPONENT ORDER (Parent + Two Children) =====
+                Render Phase (Top → Down):
+                Parent Constructor
+                Parent Render
+                First Child Constructor
+                First Child Render
+                Second Child Constructor
+                Second Child Render
+                Commit Phase (Bottom → Up):
+                First Child componentDidMount
+                Second Child componentDidMount
+                Parent componentDidMount
+
+Note:- Sibling order is preserved (NOT reversed), “Bottom → up” means by depth, not reverse sibling order
+--------------------------------------------------------
+===== FUNCTIONAL COMPONENT ORDER (Parent + Two Children) =====
+                Render Phase (Top → Down):
+                Parent function executes
+                First Child function executes
+                Second Child function executes
+                Commit Phase (Bottom → Up):
+                First Child useEffect([])
+                Second Child useEffect([])
+                Parent useEffect([])
+
+Note:- Sibling order is preserved (NOT reversed), “Bottom → up” means by depth, not reverse sibling order
+
+-> React keeps sibling order the same to ensure predictable and consistent UI behavior, React keeps siblings in the same order so the UI behaves predictably, Running components in JSX order avoids confusion and unexpected side effects
