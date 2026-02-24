@@ -179,6 +179,7 @@ Examples:-
                 Parent componentDidMount
 
 Note:- Sibling order is preserved (NOT reversed), “Bottom → up” means by depth, not reverse sibling order
+
 --------------------------------------------------------
 ===== FUNCTIONAL COMPONENT ORDER (Parent + Two Children) =====
                 Render Phase (Top → Down):
@@ -209,4 +210,4 @@ but the problem is when our app is big then the file size increases and bundling
     This all are same....
     It break downs our app in small chunks making it faster 
 
-    Example:- In makeMytrip wesite as it is so big, lets say there will be different bundles for the flights, hotel booking, Buses, Cabs etc. having so many components in each bundle.
+    Example:- In makeMytrip website as it is so big, lets say there will be different bundles for the flights, hotel booking, Buses, Cabs etc. having so many components in each bundle.
