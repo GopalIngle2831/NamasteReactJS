@@ -193,3 +193,20 @@ Note:- Sibling order is preserved (NOT reversed), “Bottom → up” means by d
 Note:- Sibling order is preserved (NOT reversed), “Bottom → up” means by depth, not reverse sibling order
 
 -> React keeps sibling order the same to ensure predictable and consistent UI behavior, React keeps siblings in the same order so the UI behaves predictably, Running components in JSX order avoids confusion and unexpected side effects
+
+
+# Important
+- Parcel bundles our code in one final single js file and browser executes that single js file only
+but the problem is when our app is big then the file size increases and bundling it in single file makes it slow performative, slow working that is why we do the following thing like
+
+- Chunking
+- Code Splitting
+- Dynamic Bundling
+- Lazy Loading
+- On demand loading
+- Dynamic import
+
+    This all are same....
+    It break downs our app in small chunks making it faster 
+
+    Example:- In makeMytrip wesite as it is so big, lets say there will be different bundles for the flights, hotel booking, Buses, Cabs etc. having so many components in each bundle.
