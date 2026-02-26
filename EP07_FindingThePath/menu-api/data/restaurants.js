@@ -68,7 +68,9 @@ module.exports = [
     image: "https://images.seeklogo.com/logo-png/42/1/kfc-logo-png_seeklogo-425726.png",
     menu: [
       { id: "601", name: "Veg Zinger Burger", price: 179 },
-      { id: "602", name: "French Fries", price: 99 }
+      { id: "602", name: "French Fries", price: 99 },
+      { id: "603", name: "Crispy Chicken", price: 499 },
+      { id: "604", name: "Peri Peri Legs", price: 799 }
     ]
   },
   {
