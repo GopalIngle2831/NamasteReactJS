@@ -24,6 +24,9 @@ const Header = () => {
     //Subscribing to the store using Selector
     //useSelector gets the Redux store provided by <Provider store={appStore}>
     //and selects cart.items from the global state.
+    //useSelector subscribes this component to the Redux store.
+    //When the selected state (cart.items) changes,
+    //only this component will re-render.
     const cartItems = useSelector((store) => store.cart.items)
     console.log(cartItems);
     
