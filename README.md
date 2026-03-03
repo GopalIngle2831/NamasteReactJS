@@ -211,3 +211,12 @@ but the problem is when our app is big then the file size increases and bundling
     It break downs our app in small chunks making it faster 
 
     Example:- In makeMytrip website as it is so big, lets say there will be different bundles for the flights, hotel booking, Buses, Cabs etc. having so many components in each bundle.
+
+
+# Redux Toolkit (RTK)
+- Install library (redux toolkit, react redux)
+- Build our store
+- Connect store to our app
+- Create a slice (cartSlice)
+- dispatch (action)
+- selector
