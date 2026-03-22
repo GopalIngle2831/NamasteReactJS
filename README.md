@@ -220,3 +220,134 @@ but the problem is when our app is big then the file size increases and bundling
 - Create a slice (cartSlice)
 - dispatch (action)
 - selector
+
+# Very Important React Core Concepts
+
+===============================
+STATE UPDATE & IMMUTABILITY NOTES
+===============================
+
+🔵 1. React Re-render Rule
+
+React re-renders when:
+
+    OldReference !== NewReference
+
+React checks reference (memory address), NOT deep values.
+
+
+--------------------------------
+🔴 WRONG (Mutable - Same Reference)
+--------------------------------
+
+const [list, setList] = useState([]);
+
+list.push("Pizza");        // ❌ Directly modifying existing array
+setList(list);             // ❌ Passing same reference
+
+Here:
+Old array reference === New array reference
+
+React may skip re-render because reference didn't change.
+
+
+--------------------------------
+✅ CORRECT (Immutable - New Reference)
+--------------------------------
+
+const [list, setList] = useState([]);
+
+setList([...list, "Pizza"]);   // ✅ New array created
+
+Here:
+Old reference !== New reference
+
+React detects change → Component re-renders.
+
+
+--------------------------------
+🔵 Replacing Entire State
+--------------------------------
+
+const json = [{ id: 1 }, { id: 2 }];
+
+setList(json);   // ✅ Works if json is a new array
+
+Why?
+Because json is a new reference.
+
+
+--------------------------------
+🔴 Object Mutation Example (Wrong)
+--------------------------------
+
+const [user, setUser] = useState({ name: "" });
+
+user.name = "Gopal";   // ❌ Mutating existing object
+setUser(user);         // ❌ Same reference
+
+React may not detect change.
+
+
+--------------------------------
+✅ Object Immutable Update (Correct)
+--------------------------------
+
+setUser({ ...user, name: "Gopal" });  // ✅ New object
+
+New reference created → React re-renders.
+
+
+--------------------------------
+🔵 Primitive Example (String)
+--------------------------------
+
+const [name, setName] = useState("");
+
+setName("Gopal");  // ✅ Always safe
+
+Why?
+Primitives (string, number, boolean) are naturally immutable.
+They are replaced, not mutated.
+
+
+--------------------------------
+🔥 Final Rule
+--------------------------------
+
+Always pass a NEW reference to state update functions.
+
+Mutable  → Same reference → No reliable re-render
+Immutable → New reference → Proper re-render
+
+# Types of testing (Developer)
+- Unit Testing
+- Integration Testing
+- End to End Testing - e2e Testing
+
+# Setting up testing in our react app
+- Install react testing library
+- Install jest
+- Install babel dependencies (jest along with babel)
+- Configure babel
+- Configure jest (npx create-jest)
+- Install jsdom library
+- Install @babel/preset-react to make jsx work in test cases
+- Include @babel/preset-react inside my babel config
+- Install @testing-library/jest-dom
+
+- Note:- As parcel already uses babel and has it configuration but we have to use our own babel configuration (babel.config.js) in order to use it with jest for testing then we need to do some changes, for that we add a file (.parcelrc) and paste some code there to disable default babel transpilation in parcel.
+
+- Note:- Jest can be used to test both React components and normal JavaScript functions. React Testing Library is specifically used for testing React components and their UI behavior, while Jest alone is sufficient for testing regular JavaScript logic or utility functions.
+
+# Testing Setup
+	•	React Testing Library – Used to test React components by simulating user interactions and verifying UI behavior.
+	•	Jest – A JavaScript testing framework used to run and manage test cases.
+	•	Babel – Used to transpile modern JavaScript into compatible JavaScript so that Jest can execute the code.
+	•	babel-jest – Allows Jest to transform JavaScript files using Babel before running tests.
+	•	@babel/core – The core engine responsible for transpiling JavaScript code.
+	•	@babel/preset-env – Converts modern JavaScript features into syntax supported by the testing environment.
+    •	Jest Configuration – A Jest configuration file is created to define how tests are discovered, executed, and processed in the project.
+    •	jsdom – Provides a browser-like environment so Jest can test DOM-based React components.
+    •	@babel/preset-react – Enables Babel to transform JSX into standard JavaScript so that Jest can understand and execute React component test cases.
+    •	@testing-library/jest-dom – Provides custom matchers (like toBeInTheDocument()) to make DOM assertions more readable and expressive in tests, working on the DOM created by jsdom.

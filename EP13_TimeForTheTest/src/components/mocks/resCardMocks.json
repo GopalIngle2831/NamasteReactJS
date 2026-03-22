@@ -1,0 +1,151 @@
+{
+    "id": "1",
+    "name": "Pizza Hut",
+    "rating": 4.3,
+    "area": "Janta Nagar",
+    "costForTwo": 350,
+    "image": "https://nextgalleriamalls.com/nextmusarambagh/wp-content/uploads/2024/02/pizzahut.png",
+    "promoted": false,
+    "menu": [
+        {
+            "card": "Recommended",
+            "items": [
+                {
+                    "id": "101",
+                    "name": "Margherita Pizza",
+                    "price": 199,
+                    "description": "Classic tomato mozzarella pizza."
+                },
+                {
+                    "id": "102",
+                    "name": "Veggie Supreme Pizza",
+                    "price": 349,
+                    "description": "Loaded with fresh vegetables."
+                },
+                {
+                    "id": "103",
+                    "name": "Paneer Delight Pizza",
+                    "price": 299,
+                    "description": "Soft paneer cubes with herbs."
+                },
+                {
+                    "id": "104",
+                    "name": "Cheese Lovers Pizza",
+                    "price": 379,
+                    "description": "Extra cheese overloaded crust."
+                },
+                {
+                    "id": "105",
+                    "name": "Corn Capsicum Pizza",
+                    "price": 249,
+                    "description": "Sweet corn with crunchy capsicum."
+                }
+            ]
+        },
+        {
+            "card": "Best Seller",
+            "items": [
+                {
+                    "id": "106",
+                    "name": "Cheese Burst Pizza",
+                    "price": 399,
+                    "description": "Molten cheese filled crust."
+                },
+                {
+                    "id": "107",
+                    "name": "Farmhouse Pizza",
+                    "price": 359,
+                    "description": "Farm fresh veggie toppings."
+                },
+                {
+                    "id": "108",
+                    "name": "Italian Special Pizza",
+                    "price": 429,
+                    "description": "Italian herbs and spices."
+                },
+                {
+                    "id": "109",
+                    "name": "Tandoori Paneer Pizza",
+                    "price": 389,
+                    "description": "Smoky tandoori paneer topping."
+                },
+                {
+                    "id": "110",
+                    "name": "Classic Veg Pizza",
+                    "price": 279,
+                    "description": "Simple and delicious veg pizza."
+                }
+            ]
+        },
+        {
+            "card": "Combos",
+            "items": [
+                {
+                    "id": "111",
+                    "name": "Pizza + Coke Combo",
+                    "price": 499,
+                    "description": "Medium pizza with Coke."
+                },
+                {
+                    "id": "112",
+                    "name": "Pizza + Garlic Bread",
+                    "price": 549,
+                    "description": "Pizza served with garlic bread."
+                },
+                {
+                    "id": "113",
+                    "name": "Family Combo Meal",
+                    "price": 799,
+                    "description": "Large pizza + sides + drinks."
+                },
+                {
+                    "id": "114",
+                    "name": "Couple Combo",
+                    "price": 699,
+                    "description": "2 pizzas with drink."
+                },
+                {
+                    "id": "115",
+                    "name": "Snack Combo",
+                    "price": 399,
+                    "description": "Small pizza with fries."
+                }
+            ]
+        },
+        {
+            "card": "New Launch",
+            "items": [
+                {
+                    "id": "116",
+                    "name": "Mexican Green Pizza",
+                    "price": 399,
+                    "description": "Spicy Mexican style pizza."
+                },
+                {
+                    "id": "117",
+                    "name": "BBQ Veg Pizza",
+                    "price": 419,
+                    "description": "BBQ sauce with roasted veggies."
+                },
+                {
+                    "id": "118",
+                    "name": "Peri Peri Paneer Pizza",
+                    "price": 429,
+                    "description": "Spicy peri peri paneer."
+                },
+                {
+                    "id": "119",
+                    "name": "Cheese Volcano Pizza",
+                    "price": 459,
+                    "description": "Overflowing molten cheese."
+                },
+                {
+                    "id": "120",
+                    "name": "Fusion Delight Pizza",
+                    "price": 439,
+                    "description": "Unique fusion style pizza."
+                }
+            ]
+        }
+    ]
+}
